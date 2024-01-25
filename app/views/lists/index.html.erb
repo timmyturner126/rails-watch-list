@@ -1,0 +1,9 @@
+<h1> My Lists <h1>
+<div class="movie-list">
+  <% @lists.each do |list| %>
+    <div class="list-card">
+      <h2><%= list.name %></h2>
+    </div>
+  <% end %>
+</div>
+<%= link_to 'Back to movies', movies_path %>

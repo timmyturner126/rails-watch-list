@@ -1,0 +1,8 @@
+<h1>Movies</h1>
+<div class="p-3 mt-3" id="movies">
+  <% @movies.each do |movie|%>
+      <%= link_to movie.title, "#" %>
+  <%end%>
+</div>
+
+ <%= link_to 'My list', lists_path %>
