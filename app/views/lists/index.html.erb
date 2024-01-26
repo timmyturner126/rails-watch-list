@@ -1,9 +1,14 @@
-<h1> My Lists <h1>
-<div class="movie-list">
-  <% @lists.each do |list| %>
-    <div class="list-card">
-      <h2><%= list.name %></h2>
+<div class="container">
+    <h1 id="title-list" class="text-center mt-5">My Lists</h1>
+    <div class="movie-list">
+      <% @lists.each do |list| %>
+        <div class="list-card">
+          <h2><%= list.name %></h2>
+        </div>
+      <% end %>
     </div>
-  <% end %>
+    <div id="buttons" class="text-center mt-3">
+      <%= link_to 'Back to movies', movies_path, class: "btn btn-danger btn-block mt-3" %>
+      <%= link_to 'Add new list', @new_path, class: "btn btn-danger btn-block mt-3" %>
+    </div>
 </div>
-<%= link_to 'Back to movies', movies_path %>

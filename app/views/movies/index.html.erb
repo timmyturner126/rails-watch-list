@@ -1,8 +1,14 @@
-<h1>Movies</h1>
-<div class="p-3 mt-3" id="movies">
-  <% @movies.each do |movie|%>
-      <%= link_to movie.title, "#" %>
-  <%end%>
+<div class="container">
+    <h1 id="title" class="text-center mt-5 p-5">My Watch List</h1>
+    <div class="card">
+      <h2 class="card-header text-center mt-3">Movies</h2>
+      <div class="p-3 mt-3 list-unstyled" id="movies">
+        <% @movies.each do |movie|%>
+          <%= link_to movie.title, "#", class: "text-decoration-none" %>
+        <%end%>
+      </div>
+    </div>
 </div>
-
- <%= link_to 'My list', lists_path %>
+<div id="button-list" class="text-center">
+ <%= link_to 'My list', lists_path, class: "btn btn-danger mt-3"%>
+</div>
